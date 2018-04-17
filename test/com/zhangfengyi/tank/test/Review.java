@@ -3,7 +3,7 @@ package com.zhangfengyi.tank.test;
 public class Review {
 	public static void main(String[] args) {
 		Person p = new Person("laowang");
-		p.v = new Car();
+		p.v = new Broom();
 		p.go("东北");
 	}
 }
