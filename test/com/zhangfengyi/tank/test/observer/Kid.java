@@ -1,11 +1,18 @@
 package com.zhangfengyi.tank.test.observer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Kid {
-	private boolean isSleeping = true;
+	public boolean isSleeping = true;
 	
-	public Observer o;
+	public List<Observer> observerList = new ArrayList<>();
 	
 	public void wakeUp() {
-		o.handleWakeUp();
+		WakeUpEvent event = new WakeUpEvent(8, this);
+		
+		observerList.forEach((observer) -> {
+			observer.handleWakeUp(event);
+		});
 	}
 }

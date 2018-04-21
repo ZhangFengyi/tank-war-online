@@ -6,7 +6,10 @@ public class Test {
 		Kid kid = new Kid();
 //		kid.o = new HongObserver();
 //		kid.o = new BeatObserver();
-		kid.o = new HugObserver();
+//		kid.o = new HugObserver();
+		kid.observerList.add(new HongObserver());
+		kid.observerList.add(new BeatObserver());
+		kid.observerList.add(new HugObserver());
 		kid.wakeUp();
 	}
 }

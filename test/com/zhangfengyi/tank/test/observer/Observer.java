@@ -1,5 +1,5 @@
 package com.zhangfengyi.tank.test.observer;
 
 public interface Observer {
-	void handleWakeUp();
+	void handleWakeUp(WakeUpEvent event);
 }
