@@ -1,14 +1,28 @@
 package com.zhangfengyi.tank;
 
 import java.awt.Frame;
+import java.awt.Graphics;
 
-public class TankFrame {
+public class TankFrame extends Frame {
+	
+	private static final long serialVersionUID = 1L;
+	
+	private int x = 50, y = 50;
 
-	public static void main(String[] args) {
-		Frame f = new Frame();
-		f.setSize(800, 600);
-		f.setResizable(false);
-		f.setVisible(true);
+	public TankFrame() {
+		setSize(800, 600);
+		setResizable(false);
+		setVisible(true);
 	}
+
+	@Override
+	public void paint(Graphics g) {
+		System.out.println("paint");
+		g.fillRect(x, y, 100, 100);
+		
+		x++;
+	}
+	
+	
 
 }
